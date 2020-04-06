@@ -14,23 +14,33 @@ class AccordionTitle extends Component {
         }}
       >
         {children ? (
-          children
+          <div className="flex-row" id={id}>
+            <div className={active ? 'arrow-down' : 'arrow-right'} id={id}></div>
+            <div className={active ? 'accordion-border font-title ' : 'font-title accordion-border'} id={id}>
+              {children}
+            </div>
+          </div>
         ) : typeof content === "function" ? (
           title()
         ) : (
               <Fragment>
                 <div className="flex-row" id={id}>
-                  <div className={active ? 'arrow-right' : 'arrow-down'} id={id}></div>
-                  <div className={active ? 'accordion-border font-title padding-1-3' : 'font-title accordion-border'} id={id}>
+                  <div className={active ? 'arrow-down' : 'arrow-right'} id={id}></div>
+                  <div className={active ? 'accordion-border font-title ' : 'font-title accordion-border'} id={id}>
                     {title}
                   </div>
                 </div>
-                <div className={active ? 'accordion-border meta-title padding-1-3' : 'meta-title accordion-border'} id={id}>{subtitle}</div>
+                <div className={active ? 'accordion-border meta-title ' : 'meta-title accordion-border'} id={id}>{subtitle}</div>
               </Fragment>
             )}
       </div>
     );
   }
+}
+
+AccordionTitle.defaultProps = {
+  active: false,
+  onChange: () => { },
 }
 
 export default AccordionTitle;

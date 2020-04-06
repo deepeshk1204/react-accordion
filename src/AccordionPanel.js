@@ -28,7 +28,7 @@ class AccordionPanel extends Component {
       <div className='accordion-panel'>
         <AccordionTitle id={id} title={title} subtitle={subtitle} active={active} onChange={onChange} />
         {/* <div>{children}</div> */}
-        {active && <AccordionContent content={content || children} childContent={childContent} />}
+        {<AccordionContent active={active} content={content || children} childContent={childContent} />}
       </div>
     );
   }
