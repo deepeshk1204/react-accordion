@@ -82,6 +82,9 @@
   line-height: 23px;
   color: #9E9E9E;
   padding-left: 2em !important;
+  position: relative;
+  border-left: 0.5px solid #BDBDBD;
+  right: -5px;
 }
 
 .flex-row {
@@ -92,7 +95,10 @@
 
 .accordion-content {
   padding: 1.6em;
-  /* border-left: 0.5px solid #BDBDBD; */
+  padding-bottom: 0.5em;
+  position: relative;
+  border-left: 0.5px solid #BDBDBD;
+  right: -5px;
 }
 .accordion-title {
   /* background:lavender; */
@@ -112,13 +118,13 @@
   border-top: 5px solid #BDBDBD;
 }
 
-/* .arrow-down::after {
+.arrow-down::after {
   top: 2px;
   right: 0px;
   content: ''; 
   position: relative;
-  border-left: 1px solid #BDBDBD;
-} */
+  border-left: 0.5px solid #BDBDBD;
+}
 
 .arrow-right {
   width: 0;
